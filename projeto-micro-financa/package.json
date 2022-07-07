@@ -1,0 +1,27 @@
+{
+  "name": "projeto-micro-financa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon src/app.js"
+  },
+  "keywords": [
+    "js",
+    "gRPC",
+    "RPC",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.6.7",
+    "@grpc/proto-loader": "^0.6.13",
+    "bluebird": "^3.7.2",
+    "express": "^4.18.1",
+    "grpc-logger": "^1.0.1",
+    "mongoose": "^6.4.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.19"
+  }
+}

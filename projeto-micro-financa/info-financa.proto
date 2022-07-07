@@ -1,0 +1,31 @@
+syntax="proto3";
+
+service Gerenciar{
+    rpc get(Empty) returns (ListarInfoFinanceiras){}
+    rpc getByIdCliente(InfoFinanceirasPorId) returns(ListarInfoFinanceiras){}
+    rpc insert(InfoFinanceiras) returns(InfoFinanceiras){}
+    rpc update(InfoFinanceiras) returns(InfoFinanceiras){}
+    rpc delete(InfoFinanceirasPor_Id) returns(Empty){}
+}
+message Empty{}
+
+message InfoFinanceiras{
+    string _id = 1;
+    string nome_banco = 2;
+    string tipo_conta = 3;
+    string nome_titular = 4;
+    string limite_cartao = 5;
+    string id_cliente = 6;
+}
+
+message ListarInfoFinanceiras{
+    repeated InfoFinanceiras InfoFinanceiras = 1;
+}
+
+message InfoFinanceirasPorId{
+    string id_cliente=1;
+}
+
+message InfoFinanceirasPor_Id{
+    string _id=1;
+}
